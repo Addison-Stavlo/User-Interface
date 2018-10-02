@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -64,3 +64,130 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Your code starts here! */
+body {
+	width: 875px;
+	margin: 0px auto;
+	/* background-image: url("../img/header-img.png"); */
+}
+
+body:before {
+	content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .08;
+  z-index: -1;
+	background: url("../img/header-img.png");
+}
+
+header {
+	/* border: 1px solid red; */
+	position: fixed;
+	height: 50px;
+	background-color: lightblue;
+}
+header nav {
+	float: left;
+}
+header nav a {
+	color: grey;
+	display: inline-block;
+	margin: 15px 27px;
+	text-decoration: none;
+}
+header nav a:hover, .innovation-box a:hover {
+	animation-name: bold-animation;
+	animation-duration: 0.2s;
+	animation-iteration-count: infinite;
+}
+header .logo-box{
+	margin: 5px 5px 10px 10px;
+	float: right;
+}
+.innovation-box {
+	height: 400px;
+	width: 50%;
+	/* border: 1px solid black; */
+	float: left;
+	padding: 30px;
+	margin: 150px auto 0px;
+	text-align: center;
+}
+
+.innovation-box h1 {
+	font-size: 70px;
+	text-align: center;
+}
+
+.innovation-box a {
+	display: inline-block;
+	border: 1px solid black;
+	padding: 5px 30px;
+	text-decoration: none;
+	color: black;
+	position: relative;
+}
+.innovation-box a:hover {
+	animation-name: move-animation;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+.circle-pic {
+	height: 400px;
+	width: 50%;
+	/* border: 1px solid black; */
+	float: right;
+	margin: 100px auto 50px;
+}
+.content {
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	margin: 500px auto 0px;
+	height: 530px;
+	clear: both;
+}
+.features, .about {
+	width: 50%;
+	float: left;
+	margin: 30px 0;
+}
+.content p {
+	font-family: 'Charmonman', cursive;
+}
+.services, .product, .vision {
+	width: 33%;
+	float: left;
+	margin: 30px 0;
+}
+address {
+	margin: 30px 0;
+}
+
+footer p {
+	text-align: center;
+	margin: 30px 0 60px;
+}
+@keyframes bold-animation {
+    0% {font-weight: normal;}
+    25% {font-weight: bold;}
+		50% {font-weight: bolder;}
+		75% {font-weight: bold;}
+		100% {font-weight: normal;}
+}
+@keyframes move-animation {
+    0% {right: 0;  font-weight: normal;}
+		10% {font-weight: bold;}
+		20% {font-weight: normal;}
+    25% {right: 35px;  font-weight: bold;}
+		30% {font-weight: normal;}
+		40% {font-weight: bold;}
+		50% {right: 0; font-weight: normal;}
+		60% {font-weight: bold;}
+		70% {font-weight: normal;}
+		75% {right: -35px;  font-weight: bold;}
+		80% {font-weight: normal;}
+		90% {font-weight: bold;}
+		100% {right: 0; font-weight: normal;}
+}
